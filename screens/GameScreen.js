@@ -60,14 +60,18 @@ function GameScreen({ userNum, onGameOver }) {
       <Title>Opponent's guess</Title>
       <NumContainer>{currentGuess}</NumContainer>
       <Card>
-        <IntoText>Higher or lower?</IntoText>
-        <View>
-          <MainButton onPress={nextGuessHandler.bind(this, "lower")}>
-            -
-          </MainButton>
-          <MainButton onPress={nextGuessHandler.bind(this, "greater")}>
-            +
-          </MainButton>
+        <IntoText style={styles.introText}>Higher or lower?</IntoText>
+        <View style={styles.buttonsContainer}>
+          <View style={styles.buttonContainer}>
+            <MainButton onPress={nextGuessHandler.bind(this, "lower")}>
+              -
+            </MainButton>
+          </View>
+          <View style={styles.buttonContainer}>
+            <MainButton onPress={nextGuessHandler.bind(this, "greater")}>
+              +
+            </MainButton>
+          </View>
         </View>
       </Card>
       <View>{/* LOG ROUNDS */}</View>
@@ -81,5 +85,15 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 35,
+  },
+  introText: {
+    marginBottom: 12,
+  },
+
+  buttonsContainer: {
+    flexDirection: "row",
+  },
+  buttonContainer: {
+    flex: 1,
   },
 });

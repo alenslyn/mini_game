@@ -1,8 +1,8 @@
 import { StyleSheet, Text } from "react-native";
 import Colors from "../../constants/colors";
 
-function IntoText({ children }) {
-  return <Text style={styles.intoText}>{children}</Text>;
+function IntoText({ children, style }) {
+  return <Text style={[styles.intoText, style]}>{children}</Text>;
 }
 
 export default IntoText;
