@@ -9,6 +9,7 @@ export default IntoText;
 
 const styles = StyleSheet.create({
   intoText: {
+    fontFamily: "open-sans",
     color: Colors.accent500,
     fontSize: 24,
   },
