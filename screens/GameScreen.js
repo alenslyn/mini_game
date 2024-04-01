@@ -108,6 +108,7 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 35,
+    alignItems: "center",
   },
   introText: {
     marginBottom: 12,
